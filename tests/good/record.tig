@@ -1,0 +1,4 @@
+/* a record type and a record variable */
+let
+  type  rectype = {name : string, age : int}
+in 

@@ -1,0 +1,28 @@
+
+let
+  var n := 9
+
+  type int_array = array of int
+  var grid import "test64.tih" in init_grid() end
+
+  function print_board() =
+  (print("-------------------");
+    for i := 0 to n - 1
+    do (print("\n");
+        print("|");
+        for j := 0 to n - 1
+        do (if grid[i * n + j] = 0
+              then print(" ")
+            else
+              print_int(grid[i * n + j]);
+
+            if (j + 1) - (3 * (j + 1) / 3) = 0
+              then print("|")
+           );
+        if (i + 1) - (3 * (i + 1) / 3) = 0
+          then print("\n-------------------")
+       );
+    print("\n"))
+in
+  print_board()
+end

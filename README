@@ -1,0 +1,34 @@
+############## FLEX ############
+
+FIlE : scan.ll
+
+this function thanks to specific regex match token and return 
+the token value for a string or an integer. 
+
+COMMENT STATE : this sublexer is able to match comment 
+
+STRING STATE  : this state his able to match STRING between quote 
+
+return value: 0 if no lexical error 2 else
+
+OUTPUT: scan.cc
+
+############# BISON ##############
+
+FILE : parse.yy 
+
+This file is parse by bison binary. contain the Tiger grammar. 
+
+OUTPUT : parse.cc 
+
+############### THL ###########
+
+FILE : thl 
+
+DEPEDENCY: parse.yy scan.ll 
+
+DESCRIPTION: Parse a bison grammar. 
+
+return VALUE:  0 no error  2 if there was an lexical error 3 if there was 
+              an syntax error.  
+

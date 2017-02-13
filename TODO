@@ -1,0 +1,16 @@
+############### flex  ##############
+
+list all the token 
+Handle comment state 
+Handle string state 
+Handle error default staete 
+
+############### 2 ################"
+
+
+Define the grammar
+Handle precedence
+Handle nonassoc 
+Handle Bad input 
+return 3 syntax error 
+
